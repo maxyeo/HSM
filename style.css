@@ -568,6 +568,26 @@ table {
 }
 
 /**
+ * 2.999 Global
+ */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    background-image: url(/img/bg.jpg);
+}
+
+/**
  * 3.0 Typography
  */
 
@@ -599,8 +619,12 @@ h1, h2 {
     font-family: 'Permanent Marker', sans-serif;
     font-weight: 400;
 }
-h3, h4 {
+h3 {
     font-family: 'Open Sans', serif;
+    font-weight: 400;
+}
+h4 {
+    font-family: 'Permanent Marker', sans-serif;
     font-weight: 400;
 }
 h5, h6 {
@@ -626,13 +650,225 @@ p {
  * 4.0 Header
  */
 
+header {
+    position: relative;
+}
+header #banner {
+    float: left;
+    width: 415px;
+    height: 250px;
+    background-image: url(/img/banner-mini.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+nav {
+    float: right;
+    height: 250px;
+    padding: 95px 0;
+}
+nav li {
+    list-style-type: none;
+    display: inline-block;
+}
+nav li a,
+nav li a:link,
+nav li a:active,
+nav li a:visited {
+    font-family: 'Permanent Marker';
+    color: #000;
+    padding: 0 12px;
+    font-size: 28px;
+    line-height: 60px;
+}
 
+/* Home Page Header */
+header.home {
+    position: relative;
+    padding: 50px 0 40px;
+    border-bottom: 12px solid #000;
+}
+.home #banner {
+    float: none;
+    width: 95%;
+    max-width: 1220px;
+    height: 0;
+    padding-bottom: 29%;
+    background-image: url(/img/banner.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.book-now {
+    width: 384px;
+    height: 94px;
+    display: block;
+    background-image: url(/img/stamp.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transition: transform .4s;
+    -moz-transition: transform .4s;
+    transition: transform .4s;
+}
+.book-now:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.book-now:active {
+    -webkit-transition: transform .1s;
+    -moz-transition: transform .1s;
+    transition: transform .1s;
+    -webkit-transform: scale(.95);
+    -moz-transform: scale(.95);
+    -ms-transform: scale(.95);
+    transform: scale(.95);
+}
+header.home .book-now {
+    margin: 90px auto 80px;
+    -webkit-transform: rotate(9deg);
+    -moz-transform: rotate(9deg);
+    -ms-transform: rotate(9deg);
+    transform: rotate(9deg);
+}
+.home nav {
+    height: auto;
+    padding: 0 20px;
+}
+.home nav li a,
+.home nav li a:link,
+.home nav li a:active,
+.home nav li a:visited {
+    font-size: 42px;
+}
 
 /**
  * 5.0 Content
  */
 
+.page-wrapper {
+    padding: 50px 10px;
+}
 
+.label {
+    background-color: #fff;
+    padding: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.5);
+}
+.label-border {
+    padding: 10px 0;
+    border: 3px solid #2a1da9;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.label-border > div {
+    padding: 0 10px;
+    position: relative;
+}
+.label-border > div:first-child {
+    border-right: 3px solid #2a1da9;
+}
+.label h3 {
+    color: #2a1da9;
+    margin: 0 0 40px;
+    font-size: 18px;
+}
+.label h5 {
+    position: absolute;
+    color: #000;
+    font-size: 28px;
+    width: 100%;
+    text-align: center;
+    margin: -60px 0 0;
+}
+.label h2 {
+    position: absolute;
+    color: #000;
+    font-size: 70px;
+    width: 100%;
+    text-align: center;
+    margin: -60px 0 0;
+}
+.service {
+    padding: 50px 0;
+}
+.service-icon {
+    float: left;
+    width: 250px;
+    height: 250px;
+    margin: 15px 30px 0 0;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.service h4 {
+    font-size: 48px;
+    margin: 0;
+}
+.service p {
+    font-size: 18px;
+}
+#services .book-now {
+    margin: -40px auto 40px;
+}
+
+/* Main Pages */
+.main {
+    padding: 100px 0;
+}
+.main-border {
+    position: relative;
+    border: 10px solid #000;
+    padding: 80px 20px 100px;
+}
+.main .label {
+    position: absolute;
+    width: 700px;
+    top: -100px;
+    right: 10px;
+}
+.main .label h3 {
+    color: #2a1da9;
+    margin: 0 0 20px;
+    font-size: 14px;
+}
+.main .label h5 {
+    font-size: 24px;
+    margin: -35px 0 0;
+}
+.main .label h2 {
+    font-size: 50px;
+    margin: -40px 0 0;
+}
+.main h1 {
+    font-size: 50px;
+    text-align: center;
+    margin: 1em 0 1em;
+}
+.toc h3 {
+    margin-top: 2em;
+    font-size: 24px;
+}
+.toc li {
+    font-family: 'Open Sans', serif;
+    font-weight: 700;
+}
+
+#priority-stamp {
+    margin: 50px 0;
+    width: 100%;
+    height: 300px;
+    background-image: url(/img/priority_stamp.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 /**
  * 6.0 Footer
