@@ -36,12 +36,12 @@ $(function() {
     });
 });
 
-if (annyang) {
+// if (annyang) {
 
-    var commands = {
-        'hello': function() { alert('Hello world!'); }
-    };
+//     var commands = {
+//         'hello': function() { alert('Hello world!'); }
+//     };
 
-    annyang.addCommands(commands);
-    annyang.start();
-}
+//     annyang.addCommands(commands);
+//     annyang.start();
+// }
