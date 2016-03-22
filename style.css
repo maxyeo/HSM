@@ -710,6 +710,20 @@ nav li a:visited {
         font-size: 18px;
     }
 }
+@media (max-width: 712px) {
+    header #banner {
+        float: none;
+        width: 100%;
+    }
+    nav {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 20px 10px 40px;
+        height: auto;
+    }
+}
 
 /* Home Page Header */
 header.home {
@@ -738,7 +752,6 @@ header.home {
     position: absolute;
     right: -200px;
     top: 10px;
-
 }
 .book-now {
     width: 384px;
@@ -809,6 +822,10 @@ header.home .book-now {
     .home nav li a:visited {
         font-size: 24px;
     }
+    #markers {
+        width: 300px;
+        height: 450px;
+    }
 }
 
 /**
@@ -862,43 +879,112 @@ header.home .book-now {
     text-align: center;
     margin: -60px 0 0;
 }
+@media (max-width: 766px) {
+    .label h3 {
+        width: 50%;
+        float: left;
+    }
+    .label h5 {
+        font-size: 24px;
+        margin: 22px 0 0;
+        position: absolute;
+    }
+    .label h5:nth-child(2) {
+        left: 25%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    .label h5:nth-child(4) {
+        left: 75%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    .label h2 {
+        font-size: 48px;
+        margin: 72px 0 0;
+    }
+}
+
 .service {
     padding: 50px 0;
+    position: relative;
 }
 .service-icon {
     float: left;
     width: 350px;
     height: 350px;
-    margin: 15px 30px 0 0;
+    margin: 15px 60px 0 0;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+}
+.service-text {
+    position: relative;
+}
+.service-text:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 375px;
+    background-color: #000;
+}
+.right .service-text:before {
+    left: auto;
+    right: 375px;
 }
 .right .service-icon {
     float: right;
     margin: 15px 0 0 30px;
 }
 .service h4 {
-    font-size: 48px;
+    font-size: 64px;
+    line-height: 100px;
     margin: 0;
 }
 .service p {
-    font-size: 18px;
+    font-size: 22px;
     max-width: 700px;
-    margin-left: 380px
+    margin-left: 410px
+}
+.service-links {
+    margin-left: 410px;
+}
+.right .service-links {
+    margin-left: auto;
+    margin-right: 410px;
+    text-align: right;
 }
 .right h4, 
 .right p {
     text-align: right;
     margin-left: auto;
-    margin-right: 380px;
+    margin-right: 410px;
 }
 .service .book-now {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 .service.right .book-now {
     margin-top: 20px;
     margin-left: auto;
+}
+.service .testimonial {
+    display: inline-block;
+    margin-top: 40px;
+}
+.service .testimonial p {
+    margin: 0;
+}
+.service-links a {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
 }
 @media (max-width: 999px) {
     .service-icon {
@@ -910,12 +996,81 @@ header.home .book-now {
         margin: 0;
     }
     .service p {
-        margin-left: 280px
+        font-size: 18px;
+        margin-left: 310px
     }
     .right h4, 
     .right p {
         margin-left: auto;
-        margin-right: 280px;
+        margin-right: 310px;
+    }
+    .service-text:before {
+        left: 275px;
+    }
+    .right .service-text:before {
+        left: auto;
+        right: 275px;
+    }
+    .service-links {
+        margin-left: 310px;
+    }
+    .right .service-links {
+        margin-right: 310px;
+    }
+}
+@media (max-width: 766px) {
+    .service-icon {
+        width: 150px;
+        height: 150px;
+        margin-right: 30px;
+    }
+    .service h4 {
+        line-height: 70px;
+    }
+    .service p,
+    .service-links {
+        margin-left: 180px;
+    }
+    .service-text:before {
+        display: none;
+    }
+    .service .book-now {
+        margin-top: 20px;
+    }
+    .right h4,
+    .right p,
+    .right .service-links {
+        margin-left: auto;
+        margin-right: 180px;
+    }
+}
+@media (max-width: 599px) {
+    .service {
+        text-align: center;
+    }
+    .service-icon {
+        width: 0;
+        height: 0;
+        margin-right: 0;
+    }
+    .service h4 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .service p,
+    .service-links {
+        margin-left: 0;
+    }
+    .service-links .book-now {
+        width: 288px;
+        height: 71px;
+    }
+    .right h4,
+    .right p,
+    .right .service-links {
+        text-align: center;
+        margin-left: auto;
+        margin-right: 0;
     }
 }
 
@@ -1007,6 +1162,17 @@ header.home .book-now {
         display: block;
     }
 }
+@media (max-width: 499px) {
+    #hopkins h2 {
+        margin-bottom: -20px;
+    }
+    .hopkins-commit {
+        padding: 10px 10px 0;
+    }
+    .hopkins-commit p {
+        font-size: 16px;
+    }
+}
 
 #hse {
     margin: 50px 0 -70px;
@@ -1033,6 +1199,9 @@ header.home .book-now {
     position: relative;
     border: 10px solid #000;
     padding: 80px 20px 100px;
+}
+.storage .main-border {
+    padding: 80px 20px 20px;
 }
 .main .label {
     position: absolute;
@@ -1112,6 +1281,17 @@ header.home .book-now {
     font-family: 'Open Sans', serif;
     font-weight: 700;
 }
+@media (max-width: 766px) {
+    .main h1 {
+        font-size: 32px;
+        margin-top: 0;
+    }
+    .main .book-now {
+        width: 288px;
+        height: 71px;
+        margin-bottom: 100px;
+    }
+}
 
 #testimonials h2 {
     background-size: contain;
@@ -1163,6 +1343,30 @@ header.home .book-now {
 .testimonial h6 {
     margin: 0 0 0 120px;
 }
+@media (max-width: 766px) {
+    #testimonials h2 {
+        font-size: 36px;
+        padding: 50px 0;
+        margin-bottom: -40px;
+    }
+    #testimonials .priority-stamp {
+        padding: 0;
+    }
+}
+@media (max-width: 599px) {
+    .testimonial-pic {
+        width: 0;
+        height: 0;
+    }
+    .testimonial p,
+    .testimonial h6 {
+        margin: 0;
+    }
+    .testimonial h5 {
+        margin: 1em 0 0 0;
+    }
+}
+
 .line-divider {
     background-color: #000;
     height: 3px;
@@ -1199,32 +1403,54 @@ header.home .book-now {
     padding: 80px 0 10px;
     font-size: 18px;
 }
-#storage-prices {
+#storage-prices,
+#storage-prices-extended {
     padding: 80px 0;
 }
-#storage-prices .row {
+#storage-prices .row,
+#storage-prices-extended .row {
     width: 100%;
     font-size: 0;
     text-align: center
 }
-#storage-prices .row:first-child {
+#storage-prices-extended .row {
+    border-bottom: 1px solid #000;
+}
+#storage-prices .row:first-child,
+#storage-prices-extended .row:first-child {
     border-bottom: 5px solid #000;
 }
 #storage-prices .row h2,
-#storage-prices .row h3 {
+#storage-prices .row h3,
+#storage-prices-extended .row h2,
+#storage-prices-extended .row h3 {
     width: 100%;
     display: inline-block;
     width: 50%;
     vertical-align: middle;
     margin: 10px 0;
 }
-#storage-prices .row h2 {
+#storage-prices-extended .row h2:first-child,
+#storage-prices-extended .row h3:first-child {
+    width: 75%;
+}
+#storage-prices-extended .row h2:last-child,
+#storage-prices-extended .row h3:last-child {
+    width: 25%;
+}
+#storage-prices .row h2,
+#storage-prices-extended .row h2 {
     font-size: 36px;
     line-height: 36px;
 }
 #storage-prices .row h3 {
     font-size: 24px;
     line-height: 24px;
+    font-weight: bold;
+}
+#storage-prices-extended .row h3 {
+    font-size: 16px;
+    line-height: 16px;
     font-weight: bold;
 }
 .post-it-note {
@@ -1292,7 +1518,35 @@ header.home .book-now {
     font-size: 18px;
     margin: 0 0 10px 0;
 }
-
+.faq p {
+    font-size: 16px;
+}
+@media (max-width: 766px) {
+    #storage-faq h2 {
+        font-size: 36px;
+        padding: 50px 0;
+        margin-bottom: 0px;
+        line-height: 36px;
+    }
+    .post-it-note {
+        margin: 0 auto;
+        width: 320px;
+        height: 300px;
+    }
+}
+@media (max-width: 499px) {
+    #storage-faq h2 {
+        font-size: 28px;
+        margin-bottom: -40px;
+        line-height: 36px;
+    }
+    .faq {
+        padding: 10px 0;
+    }
+    .faq p {
+        font-size: 14px;
+    }
+}
 
 /**
  * 6.0 Footer
@@ -1378,4 +1632,11 @@ footer {
 .site-map h3.sub {
     margin: 0 0 0 20px;
     font-size: 14px;
+}
+
+@media (max-width: 766px) {
+    #up, 
+    .site-map {
+        display: none;
+    }
 }
