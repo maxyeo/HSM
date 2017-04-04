@@ -1,5 +1,14 @@
 $(document).ready(function() {  
     sizeitup();
+
+    $('#light-content').click(function(e){
+      e.stopPropagation();
+    });
+
+    $('#light, #light-exit').click(function(){
+      $('#light').addClass('out');
+    });
+
 });
 
 $(window).resize(function() {
