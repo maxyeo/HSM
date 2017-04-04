@@ -245,7 +245,7 @@ Template Name: Storage
                 </div>
                 <div class="col-1-2 faq">
                     <h5>How long do I have to sign up for an appointment?</h5>
-                    <p>The deadline for move out appointment registration is April 29th, register soon!</p>
+                    <p>Standard registration will go until Friday, April 28, 2017. After this date, appointments can still be scheduled until Friday, May 5. However, any appointments scheduled between Saturday, April 29, and Friday, May 5 will be subject to a 10% price increase late fee. May 5 is the absolute deadline to schedule an appointment. No appointments will be accepted past Friday May 5.</p>
                 </div>
                 <div class="col-1-2 faq">
                     <h5>Where can I get boxes?</h5>
